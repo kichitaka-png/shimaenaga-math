@@ -21,7 +21,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
       - name: Set VITE_BASE_PATH from repo name
         run: echo "VITE_BASE_PATH=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
       - run: npm install
